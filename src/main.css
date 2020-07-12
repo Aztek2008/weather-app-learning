@@ -1,0 +1,700 @@
+html {
+  font-family: 'Lato', sans-serif;
+}
+
+button {
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+body {
+  background-image: url(./bgi/default-weather.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main {
+  padding-top: 39px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.main-input {
+  background-color: #fff;
+  border: none;
+  width: 500px;
+  height: 45px;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto;
+  padding-left: 60px;
+  background-image: url(icons/location_searching-24px.svg);
+  background-repeat: no-repeat;
+  background-position: 20px;
+}
+
+.wrapper-for-wrapper {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.input-wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.save-btn {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url(icons/star_border.svg);
+  border: none;
+  width: 40px;
+  height: 40px;
+}
+
+.starred {
+  background-image: url(icons/star_filled.svg);
+}
+
+.input-slider-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.siema {
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-wrapper {
+  background-color: #818993;
+  display: flex;
+  align-items: center;
+  height: 25px;
+  width: 33%;
+  width: -moz-max-content;
+  width: -webkit-max-content;
+  opacity: 0.6;
+  border-radius: 20px;
+}
+
+.cross-btn {
+  background: transparent;
+  width: 30px;
+  height: 25px;
+  background-image: url(icons/close.svg);
+  background-position: center;
+  border: none;
+}
+
+.added-city {
+  cursor: pointer;
+  text-decoration: underline;
+  padding-left: 14px;
+  padding-bottom: 4px;
+}
+
+.right-click {
+  background-image: url(icons/chevron_right.svg);
+  width: 25px;
+  height: 25px;
+  background-color: #c5c9cd;
+  border: none;
+  border-radius: 25px;
+  opacity: 0.5;
+}
+
+.weather-container {
+  position: relative;
+  margin-left: 68%;
+  margin-bottom: 30px;
+  width: 490px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #102136;
+  border-radius: 30px;
+}
+
+.weather_icon {
+  opacity: 0;
+  top: 0;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border: none;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.city {
+  margin-top: 50px;
+  color: #586473;
+  font-size: 18px;
+  line-height: 22px;
+  /* font-family: 'Lato', sans-serif; */
+}
+
+.weather-container__temperature {
+  /* font-family: 'Lato', sans-serif; */
+  font-weight: 300;
+  font-size: 90px;
+  color: #ffffff;
+}
+
+.weather-container__temperature::after {
+  content: '';
+  position: absolute;
+  background-image: url(icons/elips.png);
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.temp {
+  font-size: 18px;
+  line-height: 22px;
+  /* font-family: 'Lato', sans-serif; */
+  color: #586473;
+  margin-bottom: 5px;
+}
+
+.temp-value {
+  font-size: 18px;
+  line-height: 22px;
+  /* font-family: 'Lato', sans-serif; */
+  color: #586473;
+}
+
+.temp-value::after {
+  content: '';
+  position: absolute;
+  background-image: url(icons/elips2.png);
+  width: 10px;
+  height: 7px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.temp-container,
+.temp-container2 {
+  width: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.temp-container {
+  border-right: 1px solid #28384a;
+}
+
+.temp-container-wrapper {
+  margin-left: 35px;
+  display: flex;
+  width: 120px;
+  justify-content: space-between;
+  height: 55px;
+}
+
+.btn-wrapper2 {
+  margin-left: 77%;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  width: 270px;
+  height: 35px;
+}
+
+.switchBTN {
+  width: 125px;
+  height: 30px;
+  background-color: #f7f7f7;
+  border: none;
+  border-radius: 25px;
+}
+
+.date {
+  opacity: 1;
+  /* font-family: 'Lato', sans-serif; */
+  font-weight: 300;
+  font-size: 90px;
+  color: #ffffff;
+  margin-right: 25px;
+}
+
+.date::after {
+  content: 'th';
+  font-size: 23px;
+  position: absolute;
+}
+
+.day {
+  /* font-family: 'Lato', sans-serif; */
+  font-weight: 300;
+  font-size: 90px;
+  color: #ffffff;
+}
+
+.month,
+.current-time,
+.sunrise,
+.sunset {
+  /* font-family: 'Lato', sans-serif; */
+  font-weight: 400;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.date-info {
+  display: flex;
+  justify-content: space-between;
+  width: 525px;
+  height: 45px;
+  margin-right: 0px;
+}
+
+.second-row,
+.first-row {
+  width: 600px;
+  height: 137.5px;
+  padding-left: 60px;
+}
+
+.first-row {
+  padding-top: 60px;
+}
+
+.second-row {
+  padding-left: 20px;
+  padding-top: 40px;
+}
+
+.date-container {
+  position: relative;
+  left: -1.6%;
+  border-radius: 25px;
+  width: 600px;
+  height: 243px;
+  background-color: rgba(16, 33, 54, 0.75);
+  box-shadow: 0px 8px 43px 0px rgba(16, 33, 54, 0.59);
+}
+
+.bottom-containers-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom-list-items {
+  width: 24.9%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-before::before {
+  vertical-align: middle;
+  content: '';
+  display: inline-block;
+  margin-right: 5px;
+  width: 30px;
+  height: 30px;
+  background-image: url(icons/sunrise.png);
+}
+
+.sunset::before {
+  background-image: url(icons/sunset.png);
+}
+
+.borderstyle {
+  border-right: 1px solid #dadfe4;
+}
+
+/*-----короновирус инфо-------*/
+.corona-box,
+.air-box {
+  border-radius: 25px;
+  color: #ffffff;
+}
+
+.corona-box {
+  width: 300px;
+  height: 200px;
+  background-color: rgba(213, 67, 62, 0.75);
+  box-shadow: 0px 8px 43px 0px rgba(213, 67, 62, 0.59);
+}
+
+.corona-info {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  font-size: 28px;
+  margin-bottom: 17px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.items {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+/*-----качество воздуха-------*/
+.air-box {
+  left: -7.6%;
+  width: 500px;
+  height: 200px;
+  background-color: rgba(16, 33, 54, 0.75);
+  box-shadow: 0px 8px 43px 0px rgba(16, 33, 54, 0.59);
+}
+
+
+
+/*   YARIK && MICHAL  */
+
+/*--------- Chart styles-----------*/
+
+.show-chart-box {
+  width: 280px;
+  padding: 0 26px;
+}
+
+/* .chart-box {
+  display: none;
+} */
+.chart-box {
+  width: 280px;
+  padding: 16px 26px;
+  background-color: rgba(16, 29, 47, 0.9);
+  box-shadow: 0px 8px 43px 0px rgba(16, 33, 54, 0.59);
+  border-radius: 35px;
+}
+
+.header-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.chart-header {
+  margin-bottom: 8px;
+  padding-right: 14px;
+  font-size: 14px;
+  line-height: 22px;
+  color: rgb(255, 107, 8);
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.chart-header:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  transition: 200ms linear;
+}
+
+.chart-btn {
+  width: 27px;
+  height: 27px;
+
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  background-color: rgba(247, 247, 247, 0.2);
+  text-align: center;
+}
+
+.chart-btn:hover {
+  background-color: rgba(247, 247, 247, 0.3);
+  transition: 200ms linear;
+  cursor: pointer;
+}
+
+.chart-icon {
+  fill: white;
+  vertical-align: middle;
+}
+
+.hide-chart-icon {
+  margin-bottom: 2px;
+}
+
+.chart-title {
+  font-size: 12px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: rgb(150, 155, 163);
+}
+
+.chart-wrapper {
+  height: 385px;
+}
+
+.chart-box.hidden,
+.show-chart-box.hidden {
+  display: none;
+}
+
+.chart-box.visible {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .show-chart-box {
+    width: 608px;
+    padding: 0 30px;
+  }
+
+  .chart-box {
+    width: 608px;
+  }
+
+  .chart-header {
+    font-size: 15px;
+  }
+
+  .chart-wrapper {
+    height: 340px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .show-chart-box {
+    width: 1060px;
+    padding: 0 160px 0 130px;
+    margin: 0 auto;
+  }
+
+  .chart-box {
+    width: 1060px;
+    margin: 0 auto;
+  }
+
+  .chart-wrapper {
+    height: 420px;
+    width: 830px;
+  }
+
+  .chart-title {
+    padding-left: 130px;
+  }
+}
+
+
+/* ЯРИКА КОД */
+
+.modal {
+  width: 1060px;
+  box-shadow: 0 8px 43px rgba(16, 33, 54, 0.59);
+  border-radius: 35px;
+  background-color: rgb(16, 33, 54, 0.8);
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.list-modal,
+.list--days {
+  color: rgba(255, 255, 255, 0.342);
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal-item,
+.list--item {
+  min-width: 100px;
+  padding-top: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.modal-item {
+  max-width: 120px;
+  min-height: 200px;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.342);
+  padding: 20px 15px;
+}
+
+.list--days {
+  padding: 0 100px 30px;
+}
+
+.list-modal {
+  padding-bottom: 30px;
+  margin: 0 40px;
+}
+
+.temp {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 23px;
+  font-size: 18px;
+}
+
+.num {
+  color: #ff6b08;
+  letter-spacing: 0.75px;
+  font-size: 25px;
+  padding-bottom: 10px;
+}
+
+.icon--overley {
+  margin-bottom: 37px;
+}
+
+.line {
+  border: 1px solid rgba(255, 255, 255, 0.342);
+  max-height: 40px;
+}
+
+.name--day {
+  margin-bottom: 18px;
+  font-size: 18px;
+}
+
+.list--item:hover .name--day {
+  color: #ff6b08;
+}
+
+.date {
+  color: #fff;
+  margin-bottom: 34px;
+  font-size: 90px;
+  font-weight: 400;
+}
+
+.more-info {
+  color: rgba(255, 255, 255, 0.342);
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+  outline: none;
+  cursor: pointer;
+}
+
+.more-info:hover,
+.more-info:focus {
+  color: #ff6b08;
+}
+
+.bonus {
+  list-style: none;
+  padding: 0;
+}
+
+.bonus-item {
+  display: flex;
+}
+
+.text {
+  position: relative;
+  padding-left: 30px;
+  padding-bottom: 6px;
+}
+
+.notActive {
+  display: none;
+}
+
+.time {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.overlay-icon {
+  margin: 20px;
+}
+
+.first::before {
+  content: "";
+  display: table;
+  width: 24px;
+  height: 20px;
+  background-image: url(./icons/firstIcon.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+}
+
+.second::before {
+  content: "";
+  display: table;
+  width: 24px;
+  height: 20px;
+  background-image: url(./icons/secondIcon.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+}
+
+.third::before {
+  content: "";
+  display: table;
+  width: 24px;
+  height: 20px;
+  background-image: url(./icons/thirdIcon.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
+.show--chart {
+  color: #ff6b08;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 27px;
+  text-decoration: underline;
+}
+
+.show--button {
+  width: 27px;
+  height: 27px;
+  margin-left: 20px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.342);
+  outline: none;
+  border: none;
+  /* background-image: url("./icons/>.png"); */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+/* @media (max-width: 608px) {
+
+} */
+
+
+/* ЯРИКА КОД */
